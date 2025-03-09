@@ -1,0 +1,11 @@
+# 6. Mathematical explanation
+print("Why RANSAC Performs Better:")
+print("1. OLS minimizes sum of squared residuals: min Σ(y_i - (ax_i + b))²")
+print("   - Outliers create large residuals that disproportionately influence the solution")
+print("2. RANSAC uses a voting mechanism:")
+print("   a) Randomly select minimal samples (2 for linear regression)")
+print("   b) Fit model to these samples")
+print("   c) Identify inliers within residual threshold")
+print("   d) Repeat, keeping model with most inliers")
+print("   e) Final model is fit on all identified inliers")
+print("   - Outliers are excluded from final model fitting")
